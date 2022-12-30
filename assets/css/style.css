@@ -1,0 +1,217 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Santio;
+  src: url("../fonts/SANTIO/TTF/Santio\ regular.ttf");
+}
+
+@font-face {
+  font-family: Tangerine;
+  src: url("../fonts/Tangerine/Tangerine-Regular.ttf");
+}
+
+/* Farbe: #e7bc0e  / #efefef / #6bc1a3 / #cb91b6 / #7eb8e1 / #000 / #fff /#323232*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Santio;
+  color: #efefef;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url("../img/cleo-topper.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+span {
+  color: #fff;
+  background-color: #323232;
+  padding-top: 5px;
+  padding-inline: 5px;
+}
+/* ==== HEADER ==== */
+
+/*---Logo---*/
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-block: 1vh;
+  width: 100%;
+}
+
+.logo p {
+  font-family: Roboto;
+  text-decoration: underline;
+  text-decoration-color: #e7bc0e;
+  text-underline-offset: 1vh;
+  margin-left: 1vw;
+}
+.logo img {
+  width: 2vw;
+}
+
+header {
+  min-height: 100vh;
+  width: 100vw;
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header h2 {
+  width: 25vw;
+  padding-top: 20vh;
+}
+
+p.scroll {
+  font-family: Tangerine;
+  color: #e7bc0e;
+  font-size: 3rem;
+  margin-block: 10vh;
+}
+
+/* ====MAIN==== */
+
+main {
+  padding-inline: 10vw;
+}
+/* INTRO */
+
+.intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro h3 {
+  margin-left: 10vw;
+  width: 50vw;
+  color: #6bc1a3;
+}
+
+/* FACTS */
+
+.facts {
+  padding: 0 10vw 10vh 0vw;
+}
+
+.icon {
+  width: 10vw;
+  margin-block: 20vh 5vh;
+}
+
+.facts article h4 {
+  font-size: 8rem;
+}
+
+.facts article p {
+  font-size: 1.8rem;
+}
+
+.work h4,
+.work p {
+  color: #e7bc0e;
+}
+
+.wage h4,
+.wage p {
+  color: #cb91b6;
+}
+
+.health h4,
+.health p {
+  color: #6bc1a3;
+}
+
+.facts h3 {
+  margin: 20vh 0 0vh 18vw;
+  color: #7eb8e1;
+  width: 59vw;
+}
+
+/* PICTURE */
+
+.picture {
+  background-image: url("../img/see.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.picture img {
+  width: 100%;
+}
+
+/* DONATE */
+.donate {
+  height: 100vh;
+  background-color: #000;
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.donate h5 {
+  width: 50vw;
+  font-size: 5.5rem;
+}
+
+.donate a {
+  border: 1px solid #fff;
+  padding: 2vh 2vw;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: Roboto;
+  text-decoration: none;
+  margin-block: 10vh 0vh;
+}
+
+.donate a:hover {
+  box-shadow: 6px 6px 0 0 white;
+}
+
+/* CREDITS */
+
+.credits {
+  background-color: #000;
+}
+
+.credits p {
+  font-family: Roboto;
+  font-size: 0.8rem;
+  color: #efefefc6;
+  text-align: center;
+}
+
+.credits p a {
+  text-decoration: none;
+  color: #6bc1a3;
+  font-family: arial;
+}
