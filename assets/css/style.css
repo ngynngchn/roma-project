@@ -38,7 +38,7 @@ html {
   min-height: 100vh;
 }
 
-h2 {
+h1 {
   font-size: 4rem;
 }
 
@@ -84,9 +84,10 @@ header {
   justify-content: space-between;
 }
 
-header h2 {
-  width: 30vw;
-  padding-top: 20vh;
+header h1 {
+  width: 20vw;
+  margin: 20vh 20vw 0 0;
+  border: 1px solid white;
 }
 
 p.scroll {
@@ -94,6 +95,14 @@ p.scroll {
   color: #e7bc0e;
   font-size: 3rem;
   margin-block: 10vh;
+  letter-spacing: -0.2rem;
+}
+
+p.scroll:after {
+  content: "v";
+  font-family: Roboto;
+  margin-left: 2vw;
+  font-size: 2rem;
 }
 
 /* ====MAIN==== */
@@ -153,7 +162,7 @@ main {
 .facts h3 {
   margin: 20vh 0 0vh 18vw;
   color: #7eb8e1;
-  min-width: 59vw;
+  width: 59vw;
 }
 
 /* PICTURE */
@@ -213,4 +222,86 @@ main {
   text-decoration: none;
   color: #6bc1a3;
   font-family: arial;
+}
+
+/* for desktops */
+@media only screen and (min-width: 1367px) {
+  .header h1 {
+    width: 50vw;
+  }
+
+  .intro h3 {
+    width: 60vw;
+  }
+
+  .donate h5 {
+    width: 50vw;
+  }
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* for laptops */
+@media only screen and (min-width: 991px) and (max-width: 1366px) {
+  header h1 {
+    width: 29vw;
+  }
+
+  .intro h3 {
+    width: 60vw;
+  }
+
+  .donate h5 {
+    width: 65vw;
+    border: 1px solid white;
+  }
+}
+
+/* for large tablets */
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  header h1 {
+    width: 37vw;
+  }
+
+  .intro h3 {
+    width: 60vw;
+  }
+
+  .donate h5 {
+    width: 70vw;
+  }
+}
+
+/* for smaller tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  header h1 {
+    width: 60vw;
+  }
+
+  .intro h3 {
+    width: 60vw;
+  }
+
+  .donate h5 {
+    width: 70vw;
+  }
+}
+
+/* for cellphones */
+@media only screen and (max-width: 480px) {
+  header h1 {
+    width: 60vw;
+  }
+
+  .intro h3 {
+    width: 60vw;
+  }
+
+  .donate h5 {
+    width: 70vw;
+  }
 }
