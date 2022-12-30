@@ -26,13 +26,30 @@ html {
   height: 100%;
 }
 
-.parallax {
+.parallax::before {
+  content: " ";
+  display: block;
+  background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
+    center/cover no-repeat fixed;
+  background-blend-mode: darken;
+
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/* .parallax {
   background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
     center/cover no-repeat fixed;
   background-blend-mode: darken;
   min-height: 100vh;
   height: fit-content;
-}
+} */
 
 h1 {
   font-size: 4rem;
@@ -59,6 +76,7 @@ a {
 .donate a {
   font-family: Roboto;
 }
+
 /* ==== HEADER ==== */
 
 /* Logo */
@@ -69,13 +87,14 @@ a {
   padding-block: 1vh;
 }
 
+.logo img {
+  width: 2vw;
+}
+
 .logo p {
   text-decoration: underline #e7bc0e;
   text-underline-offset: 1vh;
-  margin-left: 1vw;
-}
-.logo img {
-  width: 2vw;
+  margin: 1vw;
 }
 
 header {
@@ -104,38 +123,26 @@ p.scroll {
 p.scroll:after {
   content: ">";
   display: inline-block;
-  transform: rotate(82deg);
-  padding-bottom: 1vh;
-  margin: 2vw;
+  transform: translate(15px, 5px) rotate(82deg);
   font-size: 3rem;
 }
 
 /* ====MAIN==== */
 
-main {
-  padding-inline: 10vw;
-}
-
 /* INTRO */
 
 .intro {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.intro h3 {
-  margin: 10vh 20vw 0 10vw;
-  width: 50vw;
+  padding: 25vh 30vw 0 20vw;
 }
 
 /* FACTS */
 
 .facts {
-  padding: 0 10vw 10vh 0vw;
+  padding: 0 20vw 10vh 10vw;
 }
 
-.icon {
+.facts .icon {
   width: 10vw;
   margin-block: 20vh 5vh;
 }
@@ -175,13 +182,13 @@ main {
 /* PICTURE */
 
 .picture {
-  background: url("../img/see.png") center/cover no-repeat;
+  background: #efefef url("../img/see.png") center/cover no-repeat;
   width: 100%;
 }
 
 .picture img {
-  width: 100%;
   vertical-align: bottom;
+  width: 100%;
 }
 
 /* DONATE */
@@ -204,7 +211,7 @@ main {
   padding: 2vh 4vw;
   width: fit-content;
   font-size: 1.5rem;
-  margin-block: 10vh 0vh;
+  margin-top: 10vh;
 }
 
 .donate a:hover {
@@ -228,25 +235,25 @@ main {
   font-family: arial;
 }
 
-/* small devices; parallax is not working */
+/* small devices; parallax might not work*/
 @media only screen and (max-width: 425px) {
   .parallax {
     background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center 50% 50% /
-      contain no-repeat scroll;
+      contain no-repeat fixed;
   }
 
   main {
-    padding-inline: 10vw;
     background-color: #000;
   }
 
   h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
   }
 
   .intro {
     min-height: fit-content;
+    padding-right: 15vw;
   }
 
   .donate {
