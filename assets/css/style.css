@@ -229,7 +229,7 @@ main {
 }
 
 /* small devices; parallax is not working */
-@media only screen and (max-device-width: 425px) and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 425px) {
   .parallax {
     background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center 50% 50% /
       contain no-repeat scroll;
