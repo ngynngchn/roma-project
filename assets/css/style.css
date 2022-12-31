@@ -26,13 +26,14 @@ html {
   height: 100%;
 }
 
-/* .parallax {
+/* w3school parallax */
+.parallax {
   background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
     center/cover no-repeat fixed;
   background-blend-mode: darken;
   min-height: 100vh;
   height: fit-content;
-} */
+}
 
 /* Lösung sollte bei kleinen Geräten funktionieren, die keinen parallax effekt unterstützen */
 /* .parallax::before {
@@ -49,7 +50,7 @@ html {
   left: 0;
   right: 0;
   z-index: -10;
-} */
+} 
 
 html::before {
   content: "";
@@ -66,6 +67,8 @@ html::before {
   right: 0;
   z-index: -10;
 }
+
+*/
 
 h1 {
   font-size: 4rem;
@@ -250,6 +253,8 @@ p.scroll:after {
 .credits p a {
   font-family: arial;
 }
+
+/* Chrome erkennt media queries - iPhone aber nicht */
 
 @media only screen and (max-device-width: 425px) {
   h3 {
