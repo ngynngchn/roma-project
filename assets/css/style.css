@@ -26,22 +26,19 @@ html {
   height: 100%;
 }
 
-.parallax::before {
-  content: " ";
-  display: block;
-  background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
-    center/cover no-repeat fixed;
-  background-blend-mode: darken;
+/* .parallax {
+  background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") top/140%
+    no-repeat;
+  background-image: url("../img/cleo-topper.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: top;
+  background-size: 140%;
+  background-repeat: no-repeat;
 
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -10;
-}
+  background-blend-mode: darken;
+  min-height: 100vh;
+  height: fit-content;
+} */
 
 /* .parallax {
   background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
@@ -50,6 +47,22 @@ html {
   min-height: 100vh;
   height: fit-content;
 } */
+
+.parallax::before {
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
+    center/cover no-repeat fixed;
+  background-blend-mode: darken;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
 
 h1 {
   font-size: 4rem;
@@ -78,6 +91,10 @@ a {
 }
 
 /* ==== HEADER ==== */
+
+/* main {
+  background-color: #000;
+} */
 
 /* Logo */
 .logo {
@@ -236,14 +253,13 @@ p.scroll:after {
 }
 
 /* small devices; parallax might not work*/
-@media only screen and (max-width: 425px) {
-  .parallax {
-    background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center 50% 50% /
-      contain no-repeat fixed;
-  }
-
-  main {
+@media only screen and (max-device-width: 425px) {
+  /* main {
     background-color: #000;
+  } */
+
+  .parallax::before {
+    background-size: 400%;
   }
 
   h3 {
@@ -264,3 +280,32 @@ p.scroll:after {
     font-size: 2.8rem;
   }
 }
+/* 
+@media only screen and (min-width: 425px) {
+  .parallax::before {
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
+      center/cover no-repeat fixed;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+  }
+
+  .parallax {
+    background: rgba(0, 0, 0, 0.5) url("../img/cleo-topper.jpg") center
+      center/cover no-repeat fixed;
+    background-blend-mode: darken;
+    min-height: 100vh;
+    height: fit-content;
+  }
+
+  main {
+    background-color: transparent;
+  }
+} */
